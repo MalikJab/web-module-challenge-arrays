@@ -49,6 +49,7 @@ function is31Flavors(arrayName){
     }
 
 }
+is31Flavors(originalFlavors);
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -95,11 +96,12 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-function getFlavorByIndex(/*code here*/){
+function getFlavorByIndex(arrayName, indexNum){
 
-    /*code here*/
+    console.log (arrayName[indexNum]);
 
 }
+getFlavorByIndex(originalFlavors, 3);
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
 
@@ -114,11 +116,15 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
+function removeFlavorByName(array, flavor){
+    let index = array.indexOf(flavor);
+    if(index > -1){
+        array.splice(array.indexOf(flavor), 1)
+    
+   console.log(array);
 }
+}
+removeFlavorByName(originalFlavors, 'Eggnog');
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
