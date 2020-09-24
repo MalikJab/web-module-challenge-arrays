@@ -135,11 +135,15 @@ Your function should accept:
 
 and should return a new array that is identical to the old array. You can name the new array however you'd like. */
 
-function copy(/*code here*/){
-
-    /*code here*/
-
-}
+function copy(oldName, newName){
+    let newArr = newName;
+    let oldArr = oldName;
+    newArr = oldArr.slice();
+    console.log(newArr);
+   }
+   
+   
+   copy(originalFlavors, 'copyList');
 
 /* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
@@ -156,10 +160,16 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+function filterByWord(array, word){
 
-    /*code here*/
-
+    let newArray = [];
+for(let a = 0; a < array.length; a++){
+  
+  if(array.includes(word) === true){
+        newArray.push(array[a]);      
+}   
+    return newArray;
+  }
 }
 
 
